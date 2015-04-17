@@ -1,0 +1,26 @@
+﻿<div>
+    <ul ng-controller="ItemDetailCtrl" class="nav navbar-nav">
+        <li ng-repeat="album in folders">
+            <div ng-hide="album.source">
+                <a href="#/{{album.id}}">
+                    <div class="itembox">
+                        <p><span>{{album.name}}</span></p>
+                        <p><span>{{album.size}}</span></p>
+                        <p><span>{{album.count}}</span></p>
+                        <p><span>{{album.updated_time}}</span></p>
+                    </div>
+                </a>
+            </div>
+            <div ng-show="album.source" ng-click="fetch(album.source)">
+                <!--<a href="{{album.source}}">-->
+                    <div class="itembox">
+                        <p><span>{{album.name}}</span></p>
+                        <p><span>{{album.size}}</span></p>
+                        <p><span>{{album.count}}</span></p>
+                        <p><span>{{album.updated_time}}</span></p>
+                    </div>
+                <!--</a>-->
+            </div>
+        </li>
+    </ul>
+</div>
